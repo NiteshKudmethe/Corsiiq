@@ -41,13 +41,13 @@ export default function Navbar({ activeSection, setActiveSection, darkMode, togg
         {/* Logo */}
         <div className="flex items-center">
           <img
-            src="/mainl.png"
+            src="/corsiiq_logo_transparent.png"
             alt="Corsiiq Logo"
             className={`transition-all duration-300 object-contain w-auto ${
               isScrolled ? "h-[50px]" : "h-[90px]"
             }`}
           />
-          <div className="text-2xl font-bold text-[#38bdf8] dark:text-[#0f172a]">CORSIIQ</div>
+          {/* <div className="text-2xl font-bold text-[#38bdf8] dark:text-[#0f172a]">CORSIIQ</div> */}
         </div>
 
         {/* Desktop Nav */}

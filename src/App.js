@@ -9,12 +9,16 @@ import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"; 
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
+      AOS.init({ duration: 800, once: true });
+
     const storedMode = localStorage.getItem("theme");
     if (storedMode === "dark") {
       document.documentElement.classList.add("dark");
@@ -38,7 +42,7 @@ export function App() {
   };
 
   return (
-    <main className="min-h-screen font-sans overflow-x-hidden bg-gradient-to-b from-[#121212] to-[#1d1d1d] text-white dark:from-white dark:to-gray-200 dark:text-black">
+    <main  className="min-h-screen font-oxygen overflow-x-hidden bg-gradient-to-b from-[#121212] to-[#1d1d1d] text-white dark:from-white dark:to-gray-200 dark:text-black">
       <Navbar
         activeSection={activeSection}
         setActiveSection={setActiveSection}
@@ -46,7 +50,7 @@ export function App() {
         toggleDarkMode={toggleDarkMode}
       />
 
-      <div className="h-[80px]"></div>
+      <div className="h-[80px]" data-aos="fade-up"></div>
 
       <Routes>
         <Route path="/" element={<Landing />} />

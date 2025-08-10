@@ -9,10 +9,10 @@ export default function Footer() {
         {/* Company Info */}
         <div>
           <div className="flex items-center space-x-2 mb-4">
-            <img src="/mainl.png" alt="Corsiiq Logo" className="h-10" />
-            <span className="text-2xl font-bold text-[#38bdf8] dark:text-[#0f172a]">
+            <img src="/corsiiq_logo_transparent.png" alt="Corsiiq Logo" className="h-10" />
+            {/* <span className="text-2xl font-bold text-[#38bdf8] dark:text-[#0f172a]">
               CORSIIQ
-            </span>
+            </span> */}
           </div>
           <p className="text-sm text-gray-300 dark:text-gray-600">
             Corsiiq Technologies Pvt Ltd delivers custom digital solutions through design, code, and intelligence. We’re passionate about building future-ready apps and systems.
