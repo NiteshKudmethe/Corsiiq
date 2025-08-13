@@ -38,7 +38,7 @@ export default function Landing() {
       {/* HERO SECTION */}
       <section
         id="home"
-        className="relative min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-20 overflow-hidden bg-[#0f172a] text-white dark:bg-white dark:text-black font-inter"
+        className="relative min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-20 overflow-hidden bg-[#000000] text-white dark:bg-white dark:text-black font-inter"
       >
         {/* Animated gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#38bdf8] via-[#0ea5e9] to-[#6366f1] opacity-10 animate-gradientMove"></div>

@@ -34,7 +34,7 @@ export default function Navbar({ activeSection, setActiveSection, darkMode, togg
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[#121212]/90 py-2 shadow-md backdrop-blur-sm" : "bg-dark py-6"
+        isScrolled ? "bg-[#000000] py-2 shadow-md backdrop-blur-sm" : "bg-dark py-6"
       } dark:bg-white/90`}
     >
       <div className="container mx-auto flex items-center justify-between px-6 transition-all duration-300">
