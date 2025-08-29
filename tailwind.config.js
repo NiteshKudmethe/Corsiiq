@@ -7,6 +7,7 @@ module.exports = {
            // Include index.html for static classes
   ],
   theme: {
+    
     extend: {
       
     keyframes: {
@@ -30,7 +31,9 @@ module.exports = {
         wiggle: "wiggle 0.5s ease-in-out infinite",
       },
        fontFamily: {
-        oxygen: ['Oxygen', 'sans-serif'],
+            sans: ["Poppins", "sans-serif"], // overrides default
+
+        // oxygen: ['Oxygen', 'sans-serif'],
       },
             scrollBehavior: ['motion-safe'],
 

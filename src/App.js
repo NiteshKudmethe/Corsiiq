@@ -42,7 +42,7 @@ export function App() {
   };
 
   return (
-    <main  className="min-h-screen font-oxygen overflow-x-hidden bg-gradient-to-b from-[#121212] to-[#1d1d1d] text-white dark:from-white dark:to-gray-200 dark:text-black">
+    <main  className="min-h-screen font-poppins overflow-x-hidden bg-gradient-to-b from-[#121212] to-[#1d1d1d] text-white dark:from-white dark:to-gray-200 dark:text-black">
       <Navbar
         activeSection={activeSection}
         setActiveSection={setActiveSection}
@@ -50,7 +50,7 @@ export function App() {
         toggleDarkMode={toggleDarkMode}
       />
 
-      <div className="h-[80px]" data-aos="fade-up"></div>
+      {/* <div className="h-[80px]" data-aos="fade-up"></div> */}
 
       <Routes>
         <Route path="/" element={<Landing />} />

@@ -1,11 +1,11 @@
+
+
+
+
+
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  FaBrain,
-  FaPaintBrush,
-  FaCogs,
-  FaLightbulb,
-} from "react-icons/fa";
+import { FaBrain, FaPaintBrush, FaCogs, FaLightbulb } from "react-icons/fa";
 import Team from "./Team";
 import Contact from "./Contact";
 
@@ -38,81 +38,132 @@ export default function Landing() {
       {/* HERO SECTION */}
       <section
         id="home"
-        className="relative min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-20 overflow-hidden bg-[#000000] text-white dark:bg-white dark:text-black font-inter"
+        className="relative h-screen flex md:flex-row w-full text-white font-inter bg-black overflow-hidden"
       >
-        {/* Animated gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#38bdf8] via-[#0ea5e9] to-[#6366f1] opacity-10 animate-gradientMove"></div>
+        {/* Left Content */}
+        <div className="relative z-20 w-full md:w-1/2 flex flex-col justify-center px-6 md:px-16 h-full">
+          <div className="relative h-full flex flex-col justify-center">
+            <h1 className="lg:text-5xl font-extrabold leading-tight mb-6 animate-fadeInUp">
+              Building Digital Experiences
+              <br />
+              that{" "}
+              <span className="bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-transparent bg-clip-text">
+                Inspire
+              </span>{" "}
+              &{" "}
+              <span className="bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-transparent bg-clip-text">
+                Perform
+              </span>
+            </h1>
 
-        {/* Left Text */}
-        <div className="relative z-10 w-full md:w-3/4 md:pr-10 mb-12 md:mb-0">
-          <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight mb-6 animate-fadeInUp">
-            Building{" "}
-            <span className="bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-transparent bg-clip-text">
-              Digital Experiences
-            </span>
-            <br />
-            that{" "}
-            <span className="bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-transparent bg-clip-text">
-              Inspire
-            </span>{" "}
-            &{" "}
-            <span className="bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-transparent bg-clip-text">
-              Perform
-            </span>
-          </h1>
+            <p className="text-lg leading-relaxed text-gray-300 mb-6 max-w-2xl">
+              At <span className="text-[#38bdf8] font-semibold">Corsiiq</span>,
+              we merge creativity with cutting-edge technology to deliver
+              solutions that connect, engage, and convert. We don’t just follow
+              trends — we set them.
+            </p>
 
-          <p className="text-lg leading-relaxed text-gray-300 dark:text-gray-700 mb-6 max-w-2xl">
-            At <span className="text-[#38bdf8] font-semibold">Corsiiq</span>, we
-            merge creativity with cutting-edge technology to deliver solutions
-            that connect, engage, and convert. We don’t just follow trends — we
-            set them.
-          </p>
+                <div className="flex flex-col sm:flex-row gap-6 justify-start items-center">
+  {/* Button 1 */}
+  <Link to="/services">
+    <div className="group inline-block [perspective:1000px]">
+      <button
+        className="
+          relative px-6 py-3 rounded-full text-white text-lg font-medium
+          bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9]
+          shadow-lg transition-all duration-300
+          hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(56,189,248,0.6)]
+          overflow-hidden
+        "
+      >
+        <span className="relative block transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
+          {/* Front */}
+          <span className="block [backface-visibility:hidden]">What We Offer</span>
+          {/* Back */}
+          <span className="absolute inset-0 flex items-center justify-center [transform:rotateX(180deg)] [backface-visibility:hidden]">
+            Check Now
+          </span>
+        </span>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/services">
-              <button className="px-6 py-3 bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-white text-lg font-medium rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
-                What We Offer
-              </button>
-            </Link>
-            <Link to="/contact">
-              <button className="px-6 py-3 border-2 border-[#38bdf8] text-[#38bdf8] text-lg font-medium rounded-lg hover:bg-[#38bdf8] hover:text-white transition-all duration-300 shadow-lg">
-                Schedule Consultation
-              </button>
-            </Link>
+        {/* Shine */}
+        <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+      </button>
+    </div>
+  </Link>
+
+  {/* Button 2 */}
+  <Link to="/contact">
+    <div className="group inline-block [perspective:1000px]">
+      <button
+        className="
+          relative px-6 py-3 border-[1px] border-[#38bdf8] rounded-full text-[#38bdf8] text-lg font-medium
+          transition-all duration-300 shadow-lg overflow-hidden
+          hover:bg-[#38bdf8] hover:text-white
+          hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(56,189,248,0.6)]
+        "
+      >
+        <span className="relative block transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
+          {/* Front */}
+          <span className="block [backface-visibility:hidden]">Schedule Consultation</span>
+          {/* Back */}
+          <span className="absolute inset-0 flex items-center justify-center [transform:rotateX(180deg)] [backface-visibility:hidden]">
+            Book Now
+          </span>
+        </span>
+
+        {/* Shine */}
+        <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+      </button>
+    </div>
+  </Link>
+</div>
           </div>
         </div>
 
-        {/* Right Video */}
-        <div className="relative z-10 w-full md:w-1/4 flex justify-center md:justify-end animate-fadeIn">
-          <div className="w-[300px] max-w-[340px] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 dark:ring-black/10">
-            <video
-              className="w-full h-full object-cover rounded-2xl"
-              autoPlay
-              muted
-              loop
-              playsInline
-            >
-              <source src="/testvideo.mp4" type="video/mp4" />
-            </video>
+        {/* Video Right Side */}
+        <div className="absolute top-0 right-0 w-1/2 h-full overflow-hidden">
+          <video
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src="/vdeo.mp4" type="video/mp4" />
+          </video>
+
+          {/* Fade Overlay */}
+          <div className="absolute inset-0 pointer-events-none">
+            {/* Strong left → right fade (0% to 50%) */}
+            <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
+
+            {/* Top fade */}
+            <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black/80 to-transparent"></div>
+
+            {/* Bottom fade */}
+            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/80 to-transparent"></div>
           </div>
         </div>
+
+        {/* Bottom-left glow */}
+        <div className="absolute bottom-0 left-0 w-2/5 h-2/5 bg-purple-700/30 rounded-full blur-[150px] animate-float pointer-events-none"></div>
       </section>
 
       {/* ABOUT SECTION */}
       <section
         id="about"
-        className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-[#0f172a] text-white dark:bg-white dark:text-black"
+        className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-black text-white"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a] to-[#1e293b] dark:from-white dark:to-gray-100 opacity-70"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-900/30 to-black/80 pointer-events-none"></div>
         <div className="relative max-w-4xl w-full text-center animate-fadeInUp">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Who We Are</h2>
-          <p className="text-lg text-gray-300 dark:text-gray-700 mb-4">
+          <p className="text-lg text-gray-300 mb-4">
             <span className="bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-transparent bg-clip-text font-semibold">
               Corsiiq
             </span>{" "}
             is more than a digital agency — we’re your innovation partner.
           </p>
-          <p className="text-lg text-gray-300 dark:text-gray-700">
+          <p className="text-lg text-gray-300">
             With a multidisciplinary team of developers, designers, and
             strategists, we deliver high-impact solutions that help brands
             thrive in a competitive digital world. Our focus is on creating
@@ -129,11 +180,11 @@ export default function Landing() {
       {/* SERVICES SECTION */}
       <section
         id="services"
-        className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-[#0f172a] text-white dark:bg-white dark:text-black"
+        className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-[#0f172a] text-white"
       >
         <div className="relative max-w-7xl w-full text-center animate-fadeInUp">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4">What We Do</h2>
-          <p className="text-lg text-gray-300 dark:text-gray-700 mb-16 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 mb-16 max-w-3xl mx-auto">
             We provide end-to-end digital solutions that not only meet today’s
             demands but anticipate tomorrow’s challenges.
           </p>
@@ -141,13 +192,13 @@ export default function Landing() {
             {services.map((service, i) => (
               <div
                 key={i}
-                className="group bg-white/10 dark:bg-black/5 backdrop-blur-lg rounded-2xl p-6 text-left transform transition duration-500 hover:-translate-y-3 hover:shadow-xl border border-white/10 dark:border-black/10"
+                className="group bg-white/10 backdrop-blur-[80px] rounded-2xl p-6 text-left transform transition duration-500 hover:-translate-y-3 hover:shadow-xl border border-white/10"
               >
                 <div className="text-[#38bdf8] text-4xl mb-4 transition-transform group-hover:scale-110">
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-300 dark:text-gray-600">{service.desc}</p>
+                <p className="text-gray-300">{service.desc}</p>
               </div>
             ))}
           </div>
