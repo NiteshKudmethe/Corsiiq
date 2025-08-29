@@ -22,7 +22,7 @@ export default function Navbar({ activeSection, setActiveSection, darkMode, togg
 
         {/* Desktop Nav (Center) */}
         <nav className="hidden md:flex flex-1 justify-center px-5">
-          <div className="flex gap-6 text-sm bg-white/10 dark:bg-black/10 px-4 py-2 rounded-full backdrop-blur-md">
+          <div className="flex border-[0.8px] gap-6 text-sm bg-white/10 dark:bg-black/10 px-4 py-2 rounded-full backdrop-blur-md">
             {navItems.map((id) => (
               <Link
                 key={id}
@@ -58,7 +58,7 @@ export default function Navbar({ activeSection, setActiveSection, darkMode, togg
         </div>
         
         {/* Theme Toggle */}
-        {/* <button
+         <button
           onClick={toggleDarkMode}
           className="ml-4 text-white dark:text-black hover:text-[#38bdf8] transition"
           aria-label="Toggle Dark Mode"
@@ -88,7 +88,7 @@ export default function Navbar({ activeSection, setActiveSection, darkMode, togg
               <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
             </svg>
           )}
-        </button> */}
+        </button> 
 
         {/* Mobile Menu Toggle */}
         <button
