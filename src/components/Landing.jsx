@@ -30,56 +30,119 @@ export default function Landing() {
 
   return (
     <>
-      {/* HERO SECTION */}
-      <section className="relative h-screen w-full flex flex-col md:flex-row bg-white text-black overflow-hidden">
-     
+  {/* HERO SECTION */}
+   <section
+  id="home"
+  className="relative h-screen -mt-24 flex md:flex-row w-full text-white font-inter bg-black overflow-hidden"
+>
+
         {/* Left Content */}
-        <div className="z-20 w-full md:w-1/2 flex flex-col justify-center px-12 md:px-24 h-full space-y-6 animate-fadeInUp">
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight">
-            Building Digital Experiences<br/>
-            that <span className="text-blue-500">Inspire</span> & <span className="text-gray-700">Perform</span>
-          </h1>
-          <p className="text-lg text-gray-600 max-w-xl">
-            At <span className="font-semibold text-black">Corsiiq</span>, we craft minimal, clean digital solutions that resonate with users and deliver results.
-          </p>
-          <div className="flex gap-6 mt-4">
-            <Link to="/services">
-              <button className="px-6 py-3 rounded-full bg-black text-white font-medium shadow-md hover:scale-105 transition-transform duration-300">
-                What We Offer
-              </button>
-            </Link>
-            <Link to="/contact">
-              <button className="px-6 py-3 rounded-full border border-black text-black font-medium hover:bg-black hover:text-white transition-colors duration-300">
-                Schedule Consultation
-              </button>
-            </Link>
+        <div className="relative z-20 w-full md:w-1/2 flex flex-col justify-center px-6 md:px-16 h-full">
+          <div className="relative h-full flex flex-col justify-center">
+            <h1 className="lg:text-5xl font-extrabold leading-tight mb-6 animate-fadeInUp">
+              Building Digital Experiences
+              <br />
+              that{" "}
+              <span className="bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-transparent bg-clip-text">
+                Inspire
+              </span>{" "}
+              &{" "}
+              <span className="bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-transparent bg-clip-text">
+                Perform
+              </span>
+            </h1>
+
+            <p className="text-lg leading-relaxed text-gray-300 mb-6 max-w-2xl">
+              At <span className="text-[#38bdf8] font-semibold">Corsiiq</span>,
+              we merge creativity with cutting-edge technology to deliver
+              solutions that connect, engage, and convert. We don’t just follow
+              trends — we set them.
+            </p>
+
+                <div className="flex flex-col sm:flex-row gap-6 justify-start items-center">
+  {/* Button 1 */}
+  <Link to="/services">
+    <div className="group inline-block [perspective:1000px]">
+      <button
+        className="
+          relative px-6 py-3 rounded-full text-white text-lg font-medium
+          bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9]
+          shadow-lg transition-all duration-300
+          hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(56,189,248,0.6)]
+          overflow-hidden
+        "
+      >
+        <span className="relative block transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
+          {/* Front */}
+          <span className="block [backface-visibility:hidden]">What We Offer</span>
+          {/* Back */}
+          <span className="absolute inset-0 flex items-center justify-center [transform:rotateX(180deg)] [backface-visibility:hidden]">
+            Check Now
+          </span>
+        </span>
+
+        {/* Shine */}
+        <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+      </button>
+    </div>
+  </Link>
+
+  {/* Button 2 */}
+  <Link to="/contact">
+    <div className="group inline-block [perspective:1000px]">
+      <button
+        className="
+          relative px-6 py-3 border-[1px] border-[#38bdf8] rounded-full text-[#38bdf8] text-lg font-medium
+          transition-all duration-300 shadow-lg overflow-hidden
+          hover:bg-[#38bdf8] hover:text-white
+          hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(56,189,248,0.6)]
+        "
+      >
+        <span className="relative block transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
+          {/* Front */}
+          <span className="block [backface-visibility:hidden]">Schedule Consultation</span>
+          {/* Back */}
+          <span className="absolute inset-0 flex items-center justify-center [transform:rotateX(180deg)] [backface-visibility:hidden]">
+            Book Now
+          </span>
+        </span>
+
+        {/* Shine */}
+        <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+      </button>
+    </div>
+  </Link>
+</div>
           </div>
         </div>
 
- 
+        {/* Video Right Side */}
+        <div className="absolute top-0 right-0 w-1/2 h-full overflow-hidden">
+          <video
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src="/vdeo.mp4" type="video/mp4" />
+          </video>
 
-{/* Right Visual */}
-<div className="relative w-full md:w-1/2 flex justify-center items-center px-6 md:px-0">
-  <div className="w-full max-w-lg h-96 md:h-[480px] overflow-hidden rounded-3xl shadow-xl">
-    <video
-      className="w-full h-full object-cover"
-      autoPlay
-      muted
-      loop
-      playsInline
-    >
-      <source src="/vdeo.mp4" type="video/mp4" />
-    </video>
-    {/* Gradient Overlay */}
-    <div className="absolute inset-0 bg-gradient-to-l from-white/90 via-white/60 to-transparent"></div>
-  </div>
-</div>
+          {/* Fade Overlay */}
+          <div className="absolute inset-0 pointer-events-none">
+            {/* Strong left → right fade (0% to 50%) */}
+            <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
 
+            {/* Top fade */}
+            <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black/80 to-transparent"></div>
 
+            {/* Bottom fade */}
+            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/80 to-transparent"></div>
+          </div>
+        </div>
 
-        {/* Floating Highlights */}
-        <div className="absolute top-32 left-20 w-32 h-32 bg-blue-200/20 rounded-full blur-[80px] animate-float pointer-events-none"></div>
-        <div className="absolute bottom-40 right-24 w-48 h-48 bg-gray-200/10 rounded-full blur-[120px] animate-float pointer-events-none"></div>
+        {/* Bottom-left glow */}
+        <div className="absolute bottom-0 left-0 w-2/5 h-2/5 bg-purple-700/30 rounded-full blur-[150px] animate-float pointer-events-none"></div>
       </section>
 
     {/* ABOUT SECTION */}
@@ -119,41 +182,49 @@ export default function Landing() {
   </div>
 </section>
 
+{/* SERVICES SECTION */}
+<section className="relative min-h-screen flex flex-col items-center justify-center px-12 py-24 bg-gradient-to-b from-black via-gray-900 to-black space-y-12">
+  <h2 className="text-4xl md:text-5xl font-bold text-center text-white">
+    What We Do
+  </h2>
 
-      {/* SERVICES SECTION */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-12 py-24 bg-white space-y-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-black">What We Do</h2>
-        
-        <p className="text-center text-gray-600 max-w-3xl text-lg">
-          Elegant solutions designed to solve today’s challenges while anticipating tomorrow’s.
-        </p>
+  <p className="text-center text-gray-300 max-w-3xl text-lg">
+    Elegant solutions designed to solve today’s challenges while anticipating tomorrow’s.
+  </p>
 
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 w-full mt-12">
-          {services.map((service, i) => (
-            <div key={i} className="relative group bg-gray-50 rounded-2xl p-6 overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
-              <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-cover rounded-2xl opacity-20 pointer-events-none"/>
-              <div className="relative z-10 flex flex-col gap-3">
-                <div className="text-black text-4xl">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-black">{service.title}</h3>
-                <p className="text-gray-600">{service.desc}</p>
-              </div>
-            </div>
-          ))}
+  {/* Services Grid */}
+  <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 w-full mt-12">
+    {services.map((service, i) => (
+      <div
+        key={i}
+        className="relative group bg-white/5 backdrop-blur-md rounded-2xl p-6 overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+      >
+        {/* Background Image with subtle overlay */}
+        <img
+          src={service.img}
+          alt={service.title}
+          className="absolute inset-0 w-full h-full object-cover rounded-2xl opacity-20 pointer-events-none"
+        />
+        <div className="relative z-10 flex flex-col gap-3">
+          <div className="text-[#38bdf8] text-4xl">{service.icon}</div>
+          <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+          <p className="text-gray-300">{service.desc}</p>
         </div>
+      </div>
+    ))}
+  </div>
 
-        <Link to="/services">
-          <button className="mt-12 px-6 py-3 bg-black text-white rounded-full font-medium shadow-md hover:scale-105 transition-transform duration-300">
-            View All Services
-          </button>
-        </Link>
-      </section>
+  <Link to="/services">
+    <button className="mt-12 px-6 py-3 bg-white text-black rounded-full font-medium shadow-md hover:scale-105 transition-transform duration-300">
+      View All Services
+    </button>
+  </Link>
+</section>
 
-      
-      
-    {/* FAQ Section */}
-<section className="bg-white dark:bg-[#1e293b] py-20 px-6">
+{/* FAQ Section */}
+<section className="bg-gradient-to-b from-black via-gray-900 to-black py-20 px-6">
   <div className="max-w-4xl mx-auto text-center">
-    <h2 className="text-4xl md:text-5xl font-extrabold text-[#38bdf8] mb-12">
+    <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-12">
       Frequently Asked Questions
     </h2>
 
@@ -192,12 +263,12 @@ export default function Landing() {
       ].map(({ question, answer }, idx) => (
         <details
           key={idx}
-          className="bg-gray-50 dark:bg-[#2e3a4b] rounded-xl p-5 cursor-pointer transition hover:shadow-lg"
+          className="bg-white/5 backdrop-blur-md rounded-xl p-5 cursor-pointer transition hover:shadow-lg"
         >
-          <summary className="font-semibold text-lg text-black dark:text-white">
+          <summary className="font-semibold text-lg text-white">
             {question}
           </summary>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">{answer}</p>
+          <p className="mt-2 text-gray-300">{answer}</p>
         </details>
       ))}
     </div>

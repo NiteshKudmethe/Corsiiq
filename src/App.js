@@ -48,18 +48,19 @@ export function App() {
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
       {/* Routes */}
-      <div className="pt-24"> {/* offset for fixed navbar */}
+      <div >{/* offset for fixed navbar */}
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Landing />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
-          
           <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
 
       <Footer />
+      
+      
       <ScrollToTopButton />
     </main>
   );

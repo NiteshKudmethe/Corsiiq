@@ -14,7 +14,7 @@ export default function Navbar({ activeSection, setActiveSection, darkMode, togg
         {/* Logo */}
         <div className="flex items-center">
           <img
-            src="/newlogo.png"
+            src="/newl.png"
             alt="Corsiiq Logo"
             className="object-contain h-11 w-auto"
           />

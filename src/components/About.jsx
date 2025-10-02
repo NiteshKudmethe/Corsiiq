@@ -65,7 +65,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="px-8 py-40 bg-white text-gray-900 transition"
+      className="px-8 py-40 bg-gradient-to-b from-black via-[#0f172a] to-black text-white transition"
     >
       <div className="max-w-6xl mx-auto space-y-32">
         {aboutSections.map((section, i) => (
@@ -81,23 +81,25 @@ export default function About() {
           >
             {/* Text */}
             <div className="md:w-1/2 space-y-5 text-center md:text-left px-4 md:px-0">
-              <h2 className="text-4xl md:text-5xl font-bold text-blue-500 mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#38bdf8] mb-4">
                 {section.title}
               </h2>
               {section.content.map((para, idx) => (
-                <p key={idx} className="text-lg md:text-xl text-gray-700">
+                <p key={idx} className="text-lg md:text-xl text-gray-300">
                   {para}
                 </p>
               ))}
             </div>
 
             {/* Image */}
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 relative">
               <img
                 src={section.img}
                 alt={section.title}
-                className="w-full h-full object-cover rounded-2xl shadow-2xl border-2 border-gray-200"
+                className="w-full h-full object-cover rounded-2xl shadow-2xl border-2 border-gray-700"
               />
+              {/* Optional dark overlay for better blending */}
+              <div className="absolute inset-0 bg-black/20 rounded-2xl pointer-events-none"></div>
             </div>
           </motion.div>
         ))}
