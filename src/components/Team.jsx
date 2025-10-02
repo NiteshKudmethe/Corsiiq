@@ -7,7 +7,7 @@ const teamMembers = [
     title: "Founder & Director",
     image: "/cropped_circle_image.png",
     socials: {
-      linkedin: "https://linkedin.com/in/niteshkudmethe",
+      linkedin: "https://www.linkedin.com/in/nitesh-kudmethe-93342914a/",
       twitter: "https://twitter.com/niteshkudmethe",
       github: "https://github.com/niteshkudmethe",
     },
@@ -17,7 +17,7 @@ const teamMembers = [
     title: "Founder & Director",
     image: "/nitiny.png",
     socials: {
-      linkedin: "https://linkedin.com/in/nitinyadav",
+      linkedin: "https://www.linkedin.com/in/nitin-yadav-b946a050",
       twitter: "https://twitter.com/nitinyadav",
       github: "https://github.com/nitinyadav",
     },
