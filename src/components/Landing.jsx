@@ -1,220 +1,214 @@
-
-
-
-
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaBrain, FaPaintBrush, FaCogs, FaLightbulb } from "react-icons/fa";
 import Team from "./Team";
-import Contact from "./Contact";
 
 export default function Landing() {
   const services = [
     {
       icon: <FaBrain />,
       title: "AI-Powered Solutions",
-      desc: "We integrate artificial intelligence into your workflows to automate tasks, predict trends, and enhance decision-making.",
+      desc: "Automate workflows and enhance decision-making with intelligent AI tools.",
+      img: "/wap.avif",
     },
     {
       icon: <FaPaintBrush />,
       title: "Brand & Product Design",
-      desc: "From logos to full product interfaces, we create visual experiences that inspire trust and drive engagement.",
-    },
+      desc: "Elegant, minimalistic designs that elevate your brand presence.",
+     img: "/wap.avif",    },
     {
       icon: <FaCogs />,
       title: "Custom Software Development",
-      desc: "Tailor-made applications designed for performance, scalability, and your specific business needs.",
-    },
+      desc: "High-performance, scalable applications crafted for your business.",
+     img: "/wap.avif",    },
     {
       icon: <FaLightbulb />,
       title: "Innovation Consulting",
-      desc: "We help you identify opportunities, adopt emerging technologies, and stay ahead of the competition.",
-    },
+      desc: "Strategic guidance to adopt emerging technologies and stay ahead.",
+     img: "/wap.avif",    },
   ];
 
   return (
     <>
       {/* HERO SECTION */}
-      <section
-        id="home"
-        className="relative h-screen flex md:flex-row w-full text-white font-inter bg-black overflow-hidden"
-      >
+      <section className="relative h-screen w-full flex flex-col md:flex-row bg-white text-black overflow-hidden">
+     
         {/* Left Content */}
-        <div className="relative z-20 w-full md:w-1/2 flex flex-col justify-center px-6 md:px-16 h-full">
-          <div className="relative h-full flex flex-col justify-center">
-            <h1 className="lg:text-5xl font-extrabold leading-tight mb-6 animate-fadeInUp">
-              Building Digital Experiences
-              <br />
-              that{" "}
-              <span className="bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-transparent bg-clip-text">
-                Inspire
-              </span>{" "}
-              &{" "}
-              <span className="bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-transparent bg-clip-text">
-                Perform
-              </span>
-            </h1>
+        <div className="z-20 w-full md:w-1/2 flex flex-col justify-center px-12 md:px-24 h-full space-y-6 animate-fadeInUp">
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight">
+            Building Digital Experiences<br/>
+            that <span className="text-blue-500">Inspire</span> & <span className="text-gray-700">Perform</span>
+          </h1>
+          <p className="text-lg text-gray-600 max-w-xl">
+            At <span className="font-semibold text-black">Corsiiq</span>, we craft minimal, clean digital solutions that resonate with users and deliver results.
+          </p>
+          <div className="flex gap-6 mt-4">
+            <Link to="/services">
+              <button className="px-6 py-3 rounded-full bg-black text-white font-medium shadow-md hover:scale-105 transition-transform duration-300">
+                What We Offer
+              </button>
+            </Link>
+            <Link to="/contact">
+              <button className="px-6 py-3 rounded-full border border-black text-black font-medium hover:bg-black hover:text-white transition-colors duration-300">
+                Schedule Consultation
+              </button>
+            </Link>
+          </div>
+        </div>
 
-            <p className="text-lg leading-relaxed text-gray-300 mb-6 max-w-2xl">
-              At <span className="text-[#38bdf8] font-semibold">Corsiiq</span>,
-              we merge creativity with cutting-edge technology to deliver
-              solutions that connect, engage, and convert. We don’t just follow
-              trends — we set them.
-            </p>
+ 
 
-                <div className="flex flex-col sm:flex-row gap-6 justify-start items-center">
-  {/* Button 1 */}
-  <Link to="/services">
-    <div className="group inline-block [perspective:1000px]">
-      <button
-        className="
-          relative px-6 py-3 rounded-full text-white text-lg font-medium
-          bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9]
-          shadow-lg transition-all duration-300
-          hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(56,189,248,0.6)]
-          overflow-hidden
-        "
-      >
-        <span className="relative block transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
-          {/* Front */}
-          <span className="block [backface-visibility:hidden]">What We Offer</span>
-          {/* Back */}
-          <span className="absolute inset-0 flex items-center justify-center [transform:rotateX(180deg)] [backface-visibility:hidden]">
-            Check Now
-          </span>
-        </span>
-
-        {/* Shine */}
-        <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-      </button>
-    </div>
-  </Link>
-
-  {/* Button 2 */}
-  <Link to="/contact">
-    <div className="group inline-block [perspective:1000px]">
-      <button
-        className="
-          relative px-6 py-3 border-[1px] border-[#38bdf8] rounded-full text-[#38bdf8] text-lg font-medium
-          transition-all duration-300 shadow-lg overflow-hidden
-          hover:bg-[#38bdf8] hover:text-white
-          hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(56,189,248,0.6)]
-        "
-      >
-        <span className="relative block transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateX(180deg)]">
-          {/* Front */}
-          <span className="block [backface-visibility:hidden]">Schedule Consultation</span>
-          {/* Back */}
-          <span className="absolute inset-0 flex items-center justify-center [transform:rotateX(180deg)] [backface-visibility:hidden]">
-            Book Now
-          </span>
-        </span>
-
-        {/* Shine */}
-        <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
-      </button>
-    </div>
-  </Link>
+{/* Right Visual */}
+<div className="relative w-full md:w-1/2 flex justify-center items-center px-6 md:px-0">
+  <div className="w-full max-w-lg h-96 md:h-[480px] overflow-hidden rounded-3xl shadow-xl">
+    <video
+      className="w-full h-full object-cover"
+      autoPlay
+      muted
+      loop
+      playsInline
+    >
+      <source src="/vdeo.mp4" type="video/mp4" />
+    </video>
+    {/* Gradient Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-l from-white/90 via-white/60 to-transparent"></div>
+  </div>
 </div>
-          </div>
-        </div>
 
-        {/* Video Right Side */}
-        <div className="absolute top-0 right-0 w-1/2 h-full overflow-hidden">
-          <video
-            className="w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            <source src="/vdeo.mp4" type="video/mp4" />
-          </video>
 
-          {/* Fade Overlay */}
-          <div className="absolute inset-0 pointer-events-none">
-            {/* Strong left → right fade (0% to 50%) */}
-            <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
 
-            {/* Top fade */}
-            <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black/80 to-transparent"></div>
-
-            {/* Bottom fade */}
-            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/80 to-transparent"></div>
-          </div>
-        </div>
-
-        {/* Bottom-left glow */}
-        <div className="absolute bottom-0 left-0 w-2/5 h-2/5 bg-purple-700/30 rounded-full blur-[150px] animate-float pointer-events-none"></div>
+        {/* Floating Highlights */}
+        <div className="absolute top-32 left-20 w-32 h-32 bg-blue-200/20 rounded-full blur-[80px] animate-float pointer-events-none"></div>
+        <div className="absolute bottom-40 right-24 w-48 h-48 bg-gray-200/10 rounded-full blur-[120px] animate-float pointer-events-none"></div>
       </section>
 
-      {/* ABOUT SECTION */}
-      <section
-        id="about"
-        className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-black text-white"
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-purple-900/30 to-black/80 pointer-events-none"></div>
-        <div className="relative max-w-4xl w-full text-center animate-fadeInUp">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Who We Are</h2>
-          <p className="text-lg text-gray-300 mb-4">
-            <span className="bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-transparent bg-clip-text font-semibold">
-              Corsiiq
-            </span>{" "}
-            is more than a digital agency — we’re your innovation partner.
-          </p>
-          <p className="text-lg text-gray-300">
-            With a multidisciplinary team of developers, designers, and
-            strategists, we deliver high-impact solutions that help brands
-            thrive in a competitive digital world. Our focus is on creating
-            meaningful connections between your brand and your audience.
-          </p>
-          <Link to="/about">
-            <button className="mt-8 px-6 py-3 bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-white text-lg rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
-              Learn More About Us
-            </button>
-          </Link>
-        </div>
-      </section>
+    {/* ABOUT SECTION */}
+<section className="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-12 py-24 bg-black space-y-12">
+  {/* Section Title */}
+  <h2 className="text-4xl md:text-5xl font-bold text-center text-white">
+    Who We Are
+  </h2>
+  <p className="max-w-2xl text-center text-gray-300 text-lg">
+    Corsiiq is a clean digital agency focused on crafting elegant, intuitive, and high-performing digital experiences.
+  </p>
+
+  {/* Image Grid */}
+  <div className="flex flex-wrap gap-6 justify-center mt-12">
+    <img
+      src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+      alt="Team Collaboration"
+      className="w-72 rounded-xl shadow-lg object-cover"
+    />
+    <img
+      src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80"
+      alt="Workspace"
+      className="w-72 rounded-xl shadow-lg object-cover"
+    />
+  </div>
+
+  {/* Learn More Button */}
+  <Link to="/about">
+    <button className="mt-8 px-6 py-3 bg-white text-black rounded-full font-medium shadow-md hover:scale-105 transition-transform duration-300">
+      Learn More About Us
+    </button>
+  </Link>
+
+  {/* Team Section */}
+  <div className="w-full mt-20">
+    <Team />
+  </div>
+</section>
+
 
       {/* SERVICES SECTION */}
-      <section
-        id="services"
-        className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-[#0f172a] text-white"
-      >
-        <div className="relative max-w-7xl w-full text-center animate-fadeInUp">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4">What We Do</h2>
-          <p className="text-lg text-gray-300 mb-16 max-w-3xl mx-auto">
-            We provide end-to-end digital solutions that not only meet today’s
-            demands but anticipate tomorrow’s challenges.
-          </p>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {services.map((service, i) => (
-              <div
-                key={i}
-                className="group bg-white/10 backdrop-blur-[80px] rounded-2xl p-6 text-left transform transition duration-500 hover:-translate-y-3 hover:shadow-xl border border-white/10"
-              >
-                <div className="text-[#38bdf8] text-4xl mb-4 transition-transform group-hover:scale-110">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-300">{service.desc}</p>
+      <section className="relative min-h-screen flex flex-col items-center justify-center px-12 py-24 bg-white space-y-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-black">What We Do</h2>
+        
+        <p className="text-center text-gray-600 max-w-3xl text-lg">
+          Elegant solutions designed to solve today’s challenges while anticipating tomorrow’s.
+        </p>
+
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 w-full mt-12">
+          {services.map((service, i) => (
+            <div key={i} className="relative group bg-gray-50 rounded-2xl p-6 overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+              <img src={service.img} alt={service.title} className="absolute inset-0 w-full h-full object-cover rounded-2xl opacity-20 pointer-events-none"/>
+              <div className="relative z-10 flex flex-col gap-3">
+                <div className="text-black text-4xl">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-black">{service.title}</h3>
+                <p className="text-gray-600">{service.desc}</p>
               </div>
-            ))}
-          </div>
-          <Link to="/services">
-            <button className="mt-12 px-6 py-3 bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] text-white text-lg rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
-              View All Services
-            </button>
-          </Link>
+            </div>
+          ))}
         </div>
+
+        <Link to="/services">
+          <button className="mt-12 px-6 py-3 bg-black text-white rounded-full font-medium shadow-md hover:scale-105 transition-transform duration-300">
+            View All Services
+          </button>
+        </Link>
       </section>
 
-      {/* TEAM SECTION */}
-      <Team />
+      
+      
+    {/* FAQ Section */}
+<section className="bg-white dark:bg-[#1e293b] py-20 px-6">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-4xl md:text-5xl font-extrabold text-[#38bdf8] mb-12">
+      Frequently Asked Questions
+    </h2>
 
-      {/* CONTACT SECTION */}
-      <Contact />
+    <div className="space-y-4 text-left">
+      {[
+        {
+          question: "What services do you offer?",
+          answer:
+            "We offer web development, custom software, mobile apps, IT solutions, and consultancy services tailored to your business needs.",
+        },
+        {
+          question: "How long does development take?",
+          answer:
+            "Project timelines vary based on complexity, but we strive to deliver projects efficiently without compromising quality.",
+        },
+        {
+          question: "What industries do you serve?",
+          answer:
+            "We serve various industries including healthcare, finance, education, retail, and more, providing tailored software solutions.",
+        },
+        {
+          question: "Do you offer support services?",
+          answer:
+            "Yes, we provide ongoing support and maintenance to ensure your systems run smoothly post-launch.",
+        },
+        {
+          question: "What is your pricing model?",
+          answer:
+            "Our pricing is project-based and depends on specific requirements, scope, and technologies used.",
+        },
+        {
+          question: "Can I request a consultation?",
+          answer:
+            "Absolutely! We offer free consultations to discuss your project needs and how we can assist you.",
+        },
+      ].map(({ question, answer }, idx) => (
+        <details
+          key={idx}
+          className="bg-gray-50 dark:bg-[#2e3a4b] rounded-xl p-5 cursor-pointer transition hover:shadow-lg"
+        >
+          <summary className="font-semibold text-lg text-black dark:text-white">
+            {question}
+          </summary>
+          <p className="mt-2 text-gray-700 dark:text-gray-300">{answer}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
+   
+      
+      
     </>
   );
 }

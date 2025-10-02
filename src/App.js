@@ -1,24 +1,26 @@
 import "./index.css";
 import React, { useState, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Landing from "./components/Landing";
 import About from "./components/About";
 import Services from "./components/Services";
 import Team from "./components/Team";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer"; 
+import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
+  const location = useLocation(); // detect route changes
 
   useEffect(() => {
-      AOS.init({ duration: 800, once: true });
+    // Initialize AOS
+    AOS.init({ duration: 800, once: true });
 
+    // Load theme from localStorage
     const storedMode = localStorage.getItem("theme");
     if (storedMode === "dark") {
       document.documentElement.classList.add("dark");
@@ -42,24 +44,21 @@ export function App() {
   };
 
   return (
-    <main  className="min-h-screen font-poppins overflow-x-hidden bg-gradient-to-b from-[#121212] to-[#1d1d1d] text-white dark:from-white dark:to-gray-200 dark:text-black">
-      <Navbar
-        activeSection={activeSection}
-        setActiveSection={setActiveSection}
-        darkMode={darkMode}
-        toggleDarkMode={toggleDarkMode}
-      />
+    <main className="min-h-screen font-poppins overflow-x-hidden bg-gradient-to-b from-[#121212] to-[#1d1d1d] text-white dark:from-white dark:to-gray-200 dark:text-black transition-all">
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
-      {/* <div className="h-[80px]" data-aos="fade-up"></div> */}
+      {/* Routes */}
+      <div className="pt-24"> {/* offset for fixed navbar */}
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Landing />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          
+          <Route path="/team" element={<Team />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
 
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      
       <Footer />
       <ScrollToTopButton />
     </main>

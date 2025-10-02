@@ -1,94 +1,96 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function Navbar({ activeSection, setActiveSection, darkMode, toggleDarkMode }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const navItems = ["home", "about", "services", "team", "blog", "careers"];
+  const navItems = ["home", "about", "services", "team"];
 
   return (
-<header className="fixed top-0 left-0 w-full z-50 bg-black dark:bg-white/90 
-                   flex items-center py-3 px-4 md:py-5 md:px-8">  <div className="container mx-auto flex items-center justify-between px-6">
+    <header className="fixed top-0 left-0 w-full z-50 bg-black dark:bg-white/90 flex items-center py-5 px-4 md:py-5 md:px-8">
+      <div className="container mx-auto flex items-center justify-between px-6">
 
-        {/* Logo (Left) */}
+        {/* Logo */}
         <div className="flex items-center">
           <img
-            src="/logggo.jpeg"
+            src="/newlogo.png"
             alt="Corsiiq Logo"
-            className="object-contain h-8 w-auto"
+            className="object-contain h-11 w-auto"
           />
-          <span class="px-3 font-bold"> Corsiiq </span>
         </div>
 
-        {/* Desktop Nav (Center) */}
-        <nav className="hidden md:flex flex-1 justify-center px-5">
-          <div className="flex border-[0.8px] gap-6 text-sm bg-white/10 dark:bg-black/10 px-4 py-2 rounded-full backdrop-blur-md">
-            {navItems.map((id) => (
-              <Link
-                key={id}
-                to={`/#${id}`}
-                className={`px-2 py-1 rounded-md transition-transform duration-200
-                  ${
-                    activeSection === id
-                      ? "text-[#38bdf8] font-bold"
-                      : "text-white dark:text-black"
-                  } hover:scale-110`}
-              >
-                {id.charAt(0).toUpperCase() + id.slice(1)}
-              </Link>
-            ))}
-          </div>
-        </nav>
+        {/* Desktop Nav */}
+      {/* Desktop Nav */}
+<nav className="hidden md:flex flex-1 justify-center px-5">
+  <div className="flex gap-6 text-sm bg-white/10 dark:bg-black/10 px-4 py-2 rounded-full backdrop-blur-md">
+    {navItems.map((id) => (
+      <Link
+        key={id}
+        to={`/${id === "home" ? "" : id}`}  // home goes to "/", others to "/about", "/services", etc.
+        className={`px-2 py-1 rounded-md transition-transform duration-200 ${
+          activeSection === id
+            ? "text-[#38bdf8] font-bold"
+            : "text-white dark:text-black"
+        } hover:scale-110`}
+      >
+        {id.charAt(0).toUpperCase() + id.slice(1)}
+      </Link>
+    ))}
+  </div>
+</nav>
 
-        {/* Contact Us (Right) */}
-        <div className="hidden md:flex">
+
+        {/* Right Section: Contact + Social + Theme Toggle */}
+        <div className="hidden md:flex items-center gap-6">
+
+          {/* Contact Us */}
           <div className="flex gap-6 text-sm bg-white/10 dark:bg-black/10 px-4 py-2 rounded-full backdrop-blur-md">
             <Link
               to="/#contact"
-              className={`px-6 py-1 rounded-full transition-transform duration-200
-                ${
-                  activeSection === "contact"
-                    ? "text-[#38bdf8] font-bold"
-                    : "text-white dark:text-[#45484a]"
-                } hover:scale-110`}
+              className={`px-6 py-1 rounded-full transition-transform duration-200 ${
+                activeSection === "contact"
+                  ? "text-[#38bdf8] font-bold"
+                  : "text-white dark:text-[#45484a]"
+              } hover:scale-110`}
             >
               Contact Us
             </Link>
           </div>
+
+          {/* Social Media Icons */}
+          <div className="flex gap-4 text-white dark:text-black">
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-[#38bdf8]">
+              <FaLinkedin size={18} />
+            </a>
+            <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-[#38bdf8]">
+              <FaGithub size={18} />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-[#38bdf8]">
+              <FaTwitter size={18} />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-[#38bdf8]">
+              <FaInstagram size={18} />
+            </a>
+          </div>
+
+          {/* Theme Toggle */}
+          {/* <button
+            onClick={toggleDarkMode}
+            className="ml-2 text-white dark:text-black hover:text-[#38bdf8] transition"
+            aria-label="Toggle Dark Mode"
+          >
+            {darkMode ? (
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m8.66-8.66l-.707.707M4.34 4.34l-.707.707M21 12h-1M4 12H3m16.66 4.66l-.707-.707M4.34 19.66l-.707-.707M12 5a7 7 0 100 14a7 7 0 000-14z" />
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+              </svg>
+            )}
+          </button> */}
         </div>
-        
-        {/* Theme Toggle */}
-         <button
-          onClick={toggleDarkMode}
-          className="ml-4 text-white dark:text-black hover:text-[#38bdf8] transition"
-          aria-label="Toggle Dark Mode"
-        >
-          {darkMode ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 3v1m0 16v1m8.66-8.66l-.707.707M4.34 4.34l-.707.707M21 12h-1M4 12H3m16.66 4.66l-.707-.707M4.34 19.66l-.707-.707M12 5a7 7 0 100 14a7 7 0 000-14z"
-              />
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-            </svg>
-          )}
-        </button> 
 
         {/* Mobile Menu Toggle */}
         <button
@@ -97,19 +99,9 @@ export default function Navbar({ activeSection, setActiveSection, darkMode, togg
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {menuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
             ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 8h16M4 16h16"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 8h16M4 16h16" />
             )}
           </svg>
         </button>
@@ -133,6 +125,14 @@ export default function Navbar({ activeSection, setActiveSection, darkMode, togg
                 {id.charAt(0).toUpperCase() + id.slice(1)}
               </Link>
             ))}
+
+            {/* Social Icons in Mobile */}
+            <div className="flex justify-center gap-5 mt-4 text-white dark:text-black">
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FaLinkedin size={18} /></a>
+              <a href="https://github.com" target="_blank" rel="noreferrer"><FaGithub size={18} /></a>
+              <a href="https://twitter.com" target="_blank" rel="noreferrer"><FaTwitter size={18} /></a>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram size={18} /></a>
+            </div>
           </div>
         </div>
       )}
