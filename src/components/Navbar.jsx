@@ -14,7 +14,7 @@ export default function Navbar({ activeSection, setActiveSection, darkMode, togg
         {/* Logo */}
         <div className="flex items-center">
           <img
-            src="/newl.png"
+            src="/Corsiiq_White@4x.png"
             alt="Corsiiq Logo"
             className="object-contain h-11 w-auto"
           />
@@ -47,7 +47,7 @@ export default function Navbar({ activeSection, setActiveSection, darkMode, togg
           {/* Contact Us */}
           <div className="flex gap-6 text-sm bg-white/10 dark:bg-black/10 px-4 py-2 rounded-full backdrop-blur-md">
             <Link
-              to="/#contact"
+              to="/contact"
               className={`px-6 py-1 rounded-full transition-transform duration-200 ${
                 activeSection === "contact"
                   ? "text-[#38bdf8] font-bold"

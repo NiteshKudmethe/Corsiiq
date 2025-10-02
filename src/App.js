@@ -48,7 +48,7 @@ export function App() {
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
       {/* Routes */}
-      <div >{/* offset for fixed navbar */}
+      <div className="pt-24">{/* offset for fixed navbar */}
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Landing />} />
           <Route path="/about" element={<About />} />
