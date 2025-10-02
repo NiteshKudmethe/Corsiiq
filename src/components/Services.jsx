@@ -24,7 +24,7 @@ export default function Services() {
         "High performance and security standards",
       ],
       technologies: ["JavaScript", "Node.js", "Java", "Python", "AWS", "Docker"],
-      img: "/csd.avif",
+      img: "/pexels-luis-gomes-166706-546819.jpg",
     },
     {
       icon: <FaPalette className="text-[#38bdf8] text-5xl mb-5" />,
@@ -38,7 +38,7 @@ export default function Services() {
         "Conversion-optimized layouts and flows",
       ],
       technologies: ["Figma", "Adobe XD", "Sketch", "InVision", "Photoshop"],
-      img: "/wap.avif",
+      img: "/pexels-pavel-danilyuk-7190953.jpg",
     },
     {
       icon: <FaRobot className="text-[#38bdf8] text-5xl mb-5" />,
@@ -52,7 +52,7 @@ export default function Services() {
         "Advanced predictive analytics capabilities",
       ],
       technologies: ["Python", "TensorFlow", "PyTorch", "AWS SageMaker", "R"],
-      img: "/wap.avif",
+      img: "/pexels-pavel-danilyuk-8294663.jpg",
     },
     {
       icon: <FaMobileAlt className="text-[#38bdf8] text-5xl mb-5" />,
@@ -66,7 +66,7 @@ export default function Services() {
         "Robust backend APIs and cloud deployment",
       ],
       technologies: ["React", "Next.js", "Flutter", "Node.js", "Firebase", "AWS"],
-      img: "/wap.avif",
+      img: "/pexels-morthy-jameson-108384720-9577225.jpg",
     },
     {
       icon: <FaLightbulb className="text-[#38bdf8] text-5xl mb-5" />,
@@ -80,7 +80,7 @@ export default function Services() {
         "Technology trend advisory and risk management",
       ],
       technologies: ["Agile", "Lean Startup", "Design Thinking", "OKRs"],
-      img: "/wap.avif",
+      img: "/pexels-a-darmel-7710090.jpg",
     },
     {
       icon: <FaCloud className="text-[#38bdf8] text-5xl mb-5" />,
@@ -94,7 +94,7 @@ export default function Services() {
         "Cost optimization and security compliance",
       ],
       technologies: ["AWS", "Azure", "Docker", "Kubernetes", "Terraform", "Jenkins"],
-      img: "/wap.avif",
+      img: "/pexels-pixabay-373543.jpg",
     },
     {
       icon: <FaLock className="text-[#38bdf8] text-5xl mb-5" />,
@@ -108,7 +108,7 @@ export default function Services() {
         "Incident response and recovery planning",
       ],
       technologies: ["OAuth2", "JWT", "SIEM", "Firewalls", "Encryption Algorithms"],
-      img: "/wap.avif",
+      img: "/pexels-pixabay-60504.jpg",
     },
     {
       icon: <FaChartLine className="text-[#38bdf8] text-5xl mb-5" />,
@@ -122,7 +122,7 @@ export default function Services() {
         "Predictive modeling and trend analysis",
       ],
       technologies: ["Power BI", "Tableau", "Looker", "SQL", "Python", "ETL"],
-      img: "/wap.avif",
+      img: "/pexels-rdne-7947663.jpg",
     },
   ];
 
@@ -155,7 +155,7 @@ export default function Services() {
               <img
                 src={img}
                 alt={title}
-                className="absolute inset-0 w-full h-full object-cover opacity-20"
+                className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
 
 export default function Navbar({ activeSection, setActiveSection, darkMode, toggleDarkMode }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,17 +8,20 @@ export default function Navbar({ activeSection, setActiveSection, darkMode, togg
   const navItems = ["home", "about", "services", "team"];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-black dark:bg-white/90 flex items-center py-5 px-4 md:py-5 md:px-8">
+    <header className="fixed top-0 left-0 w-full z-50 bg-black dark:bg-white/90 flex items-center py-8 px-4 md:py-5 md:px-8">
       <div className="container mx-auto flex items-center justify-between px-6">
 
         {/* Logo */}
         <div className="flex items-center">
+        <Link to="/">
           <img
             src="/Corsiiq_White@4x.png"
             alt="Corsiiq Logo"
             className="object-contain h-11 w-auto"
           />
+                </Link>
         </div>
+  
 
         {/* Desktop Nav */}
       {/* Desktop Nav */}
@@ -63,9 +66,9 @@ export default function Navbar({ activeSection, setActiveSection, darkMode, togg
             <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-[#38bdf8]">
               <FaLinkedin size={18} />
             </a>
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-[#38bdf8]">
-              <FaGithub size={18} />
-            </a>
+        <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-[#38bdf8] transition">
+    <FaFacebook size={18} />
+  </a> 
             <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-[#38bdf8]">
               <FaTwitter size={18} />
             </a>
@@ -107,14 +110,14 @@ export default function Navbar({ activeSection, setActiveSection, darkMode, togg
         </button>
       </div>
 
-      {/* Mobile Nav */}
+    {/* Mobile Nav */}
       {menuOpen && (
         <div className="md:hidden px-4 py-3">
           <div className="flex flex-col gap-2 bg-[#1e293b] dark:bg-gray-200 rounded-xl p-3">
-            {[...navItems, "contact"].map((id) => (
+            {navItems.map((id) => (
               <Link
                 key={id}
-                to={`/#${id}`}
+                to={`/${id === "home" ? "" : id}`}
                 onClick={() => setMenuOpen(false)}
                 className={`px-3 py-2 rounded-md transition ${
                   activeSection === id
@@ -129,9 +132,10 @@ export default function Navbar({ activeSection, setActiveSection, darkMode, togg
             {/* Social Icons in Mobile */}
             <div className="flex justify-center gap-5 mt-4 text-white dark:text-black">
               <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FaLinkedin size={18} /></a>
-              <a href="https://github.com" target="_blank" rel="noreferrer"><FaGithub size={18} /></a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer"><FaTwitter size={18} /></a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram size={18} /></a>
+<a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-[#38bdf8] transition">
+    <FaFacebook size={18} />
+  </a>                <a href="https://x.com/Corsiiq?t=Aqum0EvbfdIXe0WCAJvkeA&s=08" target="_blank" rel="noreferrer"><FaTwitter size={18} /></a>
+              <a href="https://www.instagram.com/corsiiqsystems?utm_source=qr&igsh=MWZ1bnN3YzVlYTdtNA==" target="_blank" rel="noreferrer"><FaInstagram size={18} /></a>
             </div>
           </div>
         </div>

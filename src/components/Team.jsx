@@ -5,7 +5,7 @@ const teamMembers = [
   {
     name: "Nitesh Kudmethe",
     title: "Founder & Director",
-    image: "https://randomuser.me/api/portraits/men/75.jpg",
+    image: "/cropped_circle_image.png",
     socials: {
       linkedin: "https://linkedin.com/in/niteshkudmethe",
       twitter: "https://twitter.com/niteshkudmethe",
@@ -15,21 +15,11 @@ const teamMembers = [
   {
     name: "Nitin Yadav",
     title: "Founder & Director",
-    image: "https://randomuser.me/api/portraits/men/65.jpg",
+    image: "/nitiny.png",
     socials: {
       linkedin: "https://linkedin.com/in/nitinyadav",
       twitter: "https://twitter.com/nitinyadav",
       github: "https://github.com/nitinyadav",
-    },
-  },
-  {
-    name: "Priyesh Nagdeote",
-    title: "Founder & Director",
-    image: "https://randomuser.me/api/portraits/men/85.jpg",
-    socials: {
-      linkedin: "https://linkedin.com/in/priyeshnagdeote",
-      twitter: "https://twitter.com/priyeshnagdeote",
-      github: "https://github.com/priyeshnagdeote",
     },
   },
 ];
@@ -38,8 +28,7 @@ export default function Team() {
   return (
     <section
       id="team"
-      className="relative  flex flex-col items-center justify-center px-6 md:px-12 
-                 bg-gradient-to-b from-black via-[#0f172a] to-black text-white "
+      className="relative flex flex-col items-center justify-center px-6 md:px-12 bg-gradient-to-b from-black via-[#0f172a] to-black text-white"
     >
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Team</h2>
@@ -48,19 +37,20 @@ export default function Team() {
           <span className="text-[#38bdf8] font-semibold">Corsiiq</span> — passionate, creative, and committed to innovation.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10">
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="relative bg-black/40 p-6 rounded-xl shadow-lg group cursor-pointer 
-                         transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+              className="relative bg-black/40 p-6 rounded-xl shadow-lg group cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-2xl"
             >
               {/* Profile Image */}
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-28 h-28 mx-auto rounded-full object-cover border-2 border-[#38bdf8]"
-              />
+              <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-2 border-[#38bdf8] flex items-center justify-center bg-black">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="object-contain w-full h-full"
+                />
+              </div>
 
               {/* Name & Title */}
               <h3 className="text-xl font-semibold mt-4">{member.name}</h3>

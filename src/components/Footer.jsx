@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const [formData, setFormData] = useState({ name: "", email: "" });
@@ -19,7 +20,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Company Info */}
         <div>
-          <img src="/newlogo.png" alt="Corsiiq Logo" className="h-12 mb-4" />
+          <img src="/Corsiiq_White@4x.png" alt="Corsiiq Logo" className="h-12 mb-4" />
           <p className="text-sm leading-relaxed">
             Corsiiq Systems Pvt Ltd delivers custom digital solutions through design, code, and intelligence. 
             We’re passionate about building future-ready apps and systems.
@@ -29,15 +30,19 @@ export default function Footer() {
         {/* Quick Links */}
         <div>
           <h4 className="text-lg font-semibold mb-4 text-[#38bdf8]">Quick Links</h4>
-          <ul className="space-y-2 text-sm">
-            {["Home", "About", "Services", "Team", "Careers", "Contact"].map((item) => (
-              <li key={item}>
-                <a href={`#${item.toLowerCase()}`} className="hover:text-[#38bdf8] transition">
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
+         
+<ul className="space-y-2 text-sm">
+  {["Home", "About", "Services", "Team", "Contact"].map((item) => (
+    <li key={item}>
+      <Link
+        to={`${item.toLowerCase()}`}
+        className="hover:text-[#38bdf8] transition"
+      >
+        {item}
+      </Link>
+    </li>
+  ))}
+</ul>
         </div>
 
         {/* Legal Links */}
@@ -94,8 +99,10 @@ export default function Footer() {
         <p className="text-xs text-gray-400">&copy; {new Date().getFullYear()} Corsiiq Systems Pvt Ltd. All rights reserved.</p>
         <div className="flex space-x-5 mt-4 md:mt-0">
           <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-[#38bdf8] transition"><FaLinkedin size={18} /></a>
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-[#38bdf8] transition"><FaGithub size={18} /></a>
-          <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-[#38bdf8] transition"><FaTwitter size={18} /></a>
+
+<a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-[#38bdf8] transition">
+    <FaFacebook size={18} />
+  </a>          <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-[#38bdf8] transition"><FaTwitter size={18} /></a>
           <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-[#38bdf8] transition"><FaInstagram size={18} /></a>
         </div>
       </div>

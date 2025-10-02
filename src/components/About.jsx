@@ -9,7 +9,7 @@ const aboutSections = [
       "We’re a passionate team of technologists, designers, and innovators dedicated to solving real-world problems through intelligent design and reliable software engineering.",
       "From strategy to execution, we blend creativity with precision to craft digital experiences that make technology intuitive, scalable, and human-centric."
     ],
-    img: "https://picsum.photos/600/400?random=1",
+    img: "/pexels-sevenstormphotography-443383.jpg",
     reverse: false
   },
   {
@@ -18,7 +18,7 @@ const aboutSections = [
       "Our Mission: To architect intelligent and human-focused digital solutions that empower businesses and elevate user experiences.",
       "Our Vision: To become a global catalyst for innovation, where technology meets imagination to shape a smarter future."
     ],
-    img: "https://picsum.photos/600/400?random=2",
+    img: "/pexels-diva-plavalaguna-6147381.jpg",
     reverse: true
   },
   {
@@ -27,7 +27,7 @@ const aboutSections = [
       "We're a tight-knit collective of full-stack developers, UI/UX designers, cloud architects, product thinkers, and strategists who believe in collaboration, transparency, and continuous learning.",
       "Each member brings a unique spark — together, we turn ideas into impactful digital experiences."
     ],
-    img: "https://picsum.photos/600/400?random=3",
+    img: "pexels-polina-zimmerman-3782235.jpg",
     reverse: false
   },
   {
@@ -36,7 +36,7 @@ const aboutSections = [
       "Corsiiq was born out of the need for digital experiences that don't just function — they inspire. Starting as a small freelance collaboration, we’ve evolved into a forward-thinking digital partner serving clients across industries and continents.",
       "Our journey has been fueled by a deep desire to solve problems creatively, automate intelligently, and build with purpose."
     ],
-    img: "https://picsum.photos/600/400?random=4",
+    img: "pexels-rdne-7563675.jpg",
     reverse: true
   },
   {
@@ -47,7 +47,7 @@ const aboutSections = [
       "Integrated AI tools and automation in real-world business processes",
       "Maintained 100% on-time delivery with strong client retention"
     ],
-    img: "https://picsum.photos/600/400?random=5",
+    img: "pexels-khwanchai-12885861.jpg",
     reverse: false
   },
   {
@@ -56,7 +56,7 @@ const aboutSections = [
       "We believe in building with empathy, communicating with honesty, and delivering with excellence. Our work environment thrives on curiosity, respect, and a constant push to innovate.",
       "Remote-first but globally connected, we value flexibility, experimentation, and a shared commitment to craft."
     ],
-    img: "https://picsum.photos/600/400?random=6",
+    img: "pexels-goldcircuits-4205906.jpg",
     reverse: true
   },
 ];

@@ -51,6 +51,7 @@ export function App() {
       <div className="pt-24">{/* offset for fixed navbar */}
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Landing />} />
+           <Route path="/home" element={<Landing />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/team" element={<Team />} />
@@ -61,7 +62,7 @@ export function App() {
       <Footer />
       
       
-      <ScrollToTopButton />
+      {/* <ScrollToTopButton /> */}
     </main>
   );
 }

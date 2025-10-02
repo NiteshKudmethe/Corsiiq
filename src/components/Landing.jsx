@@ -125,7 +125,7 @@ export default function Landing() {
             loop
             playsInline
           >
-            <source src="/vdeo.mp4" type="video/mp4" />
+            <source src="/12359943_1920_1080_24fps.mp4" type="video/mp4" />
           </video>
 
           {/* Fade Overlay */}
